@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include "./src/layouts/partials/head.njk" %}
+    <body>
+        <main class="container">
+            <header>
+                {% for link in global.site.links %}
+                    [ <a href="{{ link.href }}">{{ link.title }}</a> ]
+                {% endfor %}
+            </header>
+            <div>
+                {{ contents | safe }}
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+$page-width : 80ch;
+$margin-colour: #DCDDE1;
+$main-font-size: 12px;
+
+body {
+    font-family: monospace;
+    font-size: $main-font-size;
+}
+
+.container {
+    display: block;
+    position: relative;
+    margin: auto;
+    border-left: 1px solid $margin-colour;
+    padding-left: 1ch;
+    width: $page-width;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-size: $main-font-size;
+}
+
+h2,
+h3,
+h4,
+h5 {
+    font-weight: normal;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+p {
+    margin-left: 4ch;
+    font-size: $main-font-size;
+}
+
+img {
+    width: 100%;
+}
+
+pre {
+    margin-left: 8ch;
+    border-left: 1ch solid $margin-colour;
+    padding-left: 1ch;
+    width: $page-width - 10ch;
+    overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}

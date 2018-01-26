@@ -1,0 +1,4 @@
+dist
+/**/*.swp
+**/*.DSTORE
+node_modules

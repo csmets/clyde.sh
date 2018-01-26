@@ -1,0 +1,24 @@
+{
+  "name": "clyde.sh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js"
+  },
+  "author": "Clyde Smets",
+  "license": "ISC",
+  "dependencies": {
+    "metalsmith": "^2.3.0",
+    "metalsmith-autoprefixer": "^1.1.2",
+    "metalsmith-drafts": "0.0.1",
+    "metalsmith-encode-html": "0.0.2",
+    "metalsmith-layouts": "1.8.0",
+    "metalsmith-markdown": "^0.2.2",
+    "metalsmith-metadata-directory": "^1.1.0",
+    "metalsmith-permalinks": "^0.5.0",
+    "metalsmith-sass": "^1.5.1",
+    "metalsmith-sass-lint": "^1.0.3",
+    "nunjucks": "^3.0.1"
+  }
+}
