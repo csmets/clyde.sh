@@ -5,18 +5,27 @@
             {
                 "title": "Home",
                 "href": "/"
+            },
+            {
+                "title": "GitHub",
+                "href": "https://github.com/csmets"
             }
         ],
         "articles": [
             {
-                "title": "Understanding encryption - building shift encrypt",
-                "link": "/2016/understanding-encryption",
-                "date": "2016-11-22"
+                "title": "Last and New Year Resolutions",
+                "link": "/2018/last-and-new-year-resolutions",
+                "date": "2018-01-27"
             },
             {
                 "title": "Hide yo' source, hide yo' scripts. The bots are coming!",
                 "link": "/2017/hide-yo-source-hide-yo-scripts",
                 "date": "2017-03-13"
+            },
+            {
+                "title": "Understanding encryption - building shift encrypt",
+                "link": "/2016/understanding-encryption",
+                "date": "2016-11-22"
             }
         ]
     }

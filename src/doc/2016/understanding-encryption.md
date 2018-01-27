@@ -2,7 +2,7 @@
 title: Understanding Encryption
 draft: false
 ---
-# Understanding encryption - building shift encrypt
+# Understanding encryption - building shift encrypt
 ## A quick run through of how I built my own encryption.
 #### [Source Code](https://github.com/csmets/CSSCrypt).
 
@@ -16,10 +16,10 @@ In primary school (US: elementary school) my best friend and I wanted to be able
 
 **18 years later**, I decided to do some self study on binary, because surprisingly I was never taught it. Down the rabbit hole I went. From binary, came hexadecimals then ASCII hex codes till finally concluding at encoding. After learning this stuff, I realized - "Hey, couldn't I use this to encrypt a message?". Which reminded me of that time in back primary school.
 
-The original idea was to copy how base64 works and just shuffle around the public key so that you couldn't decode it unless you have that key - thus becoming a private key = encryption.
+The original idea was to copy how base64 works and just shuffle around the public key so that you couldn't decode it unless you have that key - thus becoming a private key = encryption.
 
 > **Optional note**:
-> The difference between encoding and encrypting is the key being public and private. Encoding is when the key is public, so anyone can decode it. Whereas encryption requires a private key - only those with the key can decrypt the message.
+> The difference between encoding and encrypting is the key being public and private. Encoding is when the key is public, so anyone can decode it. Whereas encryption requires a private key - only those with the key can decrypt the message.
 
 So how do we encrypt "My Secret Message"?
 
