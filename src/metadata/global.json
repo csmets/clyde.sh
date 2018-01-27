@@ -9,12 +9,12 @@
         ],
         "articles": [
             {
-                "title": "Understanding encryption — building shift encrypt",
+                "title": "Understanding encryption - building shift encrypt",
                 "link": "/2016/understanding-encryption",
                 "date": "2016-11-22"
             },
             {
-                "title": "Hide yo’ source, hide yo’ scripts. The bots are coming!",
+                "title": "Hide yo' source, hide yo' scripts. The bots are coming!",
                 "link": "/2017/hide-yo-source-hide-yo-scripts",
                 "date": "2017-03-13"
             }

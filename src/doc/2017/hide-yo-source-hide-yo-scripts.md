@@ -1,18 +1,18 @@
 ---
-title: Hide yo’ source, hide yo’ scripts. The bots are coming!
+title: Hide yo' source, hide yo' scripts. The bots are coming!
 draft: false
 ---
-# Hide yo’ source, hide yo’ scripts. The bots are coming!
+# Hide yo' source, hide yo' scripts. The bots are coming!
 
-We can all agree that we don’t like bots coming in on our turf and digging up
-emails and other important goodies for us to shake our head about. However, we 
+We can all agree that we don't like bots coming in on our turf and digging up
+emails and other important goodies for us to shake our head about. However, we
 still need those important search bots to come in and take relevant information
-so those "SEO Experts" can still keep our sites rank #1 on Google. So what can 
+so those "SEO Experts" can still keep our sites rank #1 on Google. So what can
 we do about it?
 
 We know or are familiar about HTTPS. It encrypts the packets from the client to
 the server so if there is a man in the middle, all he is going to get is
-gibberish. However if we `curl` a website in terminal we can easily get it’s
+gibberish. However if we `curl` a website in terminal we can easily get it's
 source. Cloudflare has a service that prevents bots from seeing emails by hiding
 them. However after the recent ['Cloudbleed'](https://en.wikipedia.org/wiki/Cloudbleed)
 I think second thoughts might be coming across a few customers minds.
@@ -31,14 +31,14 @@ it and no important information is collected.
 _Below is an example of how I went about on doing this._
 
 In my previous article on [learning encryption]() I investigated to see if I
-can create my own encryption. While it’s definitely not a good idea for everyone
-to start creating their own encryption, I’m just going to use mine for this
+can create my own encryption. While it's definitely not a good idea for everyone
+to start creating their own encryption, I'm just going to use mine for this
 example, but you can use any encryption you want. The idea will be in same.
 
 __*Disclaimer: Basic understanding of Javascript and Node is required to best
 understand the rest of the article :-( sorry.__
 
-To start this project I’m using `npm`/`node` to create a build of the encrypted
+To start this project I'm using `npm`/`node` to create a build of the encrypted
 html elements with the following html markup:
 
 ```html
@@ -49,10 +49,10 @@ html elements with the following html markup:
 		<!— ROBOT META STUFF CAN GO HERE —>
 	</head>
 	<body>
-		<div id=“details”>
+		<div id=“details">
 			<p>This is a secret page</p>
 		</div>
-		<div id=“encrypt”>
+		<div id=“encrypt">
 			<p>My secret content.</p>
 			<!— IMPORTANT STUFF HERE —>
 		</div>
