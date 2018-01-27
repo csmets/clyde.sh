@@ -46,15 +46,15 @@ html elements with the following html markup:
 <html>
 	<head>
 		<title>Secret Page</title>
-		<!— ROBOT META STUFF CAN GO HERE —>
+		<!-- ROBOT META STUFF CAN GO HERE -->
 	</head>
 	<body>
-		<div id=“details">
+		<div id="details">
 			<p>This is a secret page</p>
 		</div>
-		<div id=“encrypt">
+		<div id="encrypt">
 			<p>My secret content.</p>
-			<!— IMPORTANT STUFF HERE —>
+			<!-- IMPORTANT STUFF HERE -->
 		</div>
 	</body>
 </html>
