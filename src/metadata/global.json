@@ -13,6 +13,11 @@
         ],
         "articles": [
             {
+                "title": "OOP - Dependency Injection",
+                "link": "/2018/oop-dependency-injection",
+                "date": "2018-02-03"
+            },
+            {
                 "title": "Last and New Year Resolutions",
                 "link": "/2018/last-and-new-year-resolutions",
                 "date": "2018-01-27"
