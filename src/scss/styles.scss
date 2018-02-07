@@ -1,9 +1,8 @@
 $page-width : 80ch;
 $margin-colour: #DCDDE1;
-$main-font-size: 12px;
+$main-font-size: 15px;
 
 body {
-    font-family: monospace;
     font-size: $main-font-size;
 }
 
@@ -51,6 +50,7 @@ pre {
     padding-left: 1ch;
     width: $page-width - 10ch;
     overflow-x: scroll;
+    font-size: 12px;
 }
 
 ::-webkit-scrollbar {
