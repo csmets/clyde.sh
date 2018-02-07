@@ -44,6 +44,11 @@ img {
     width: 100%;
 }
 
+code {
+  font-size: 12px;
+  font-weight: bold;
+}
+
 pre {
     margin-left: 8ch;
     border-left: 1ch solid $margin-colour;
@@ -51,6 +56,11 @@ pre {
     width: $page-width - 10ch;
     overflow-x: scroll;
     font-size: 12px;
+
+    code {
+      border: none;
+      font-weight: normal;
+    }
 }
 
 ::-webkit-scrollbar {
