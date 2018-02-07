@@ -1,12 +1,12 @@
 ---
 title: JS - Binary Search
-draft: true
+draft: false
 ---
 
 # JavaScript Use Binary Search over Linear Search
 
 ## Problem
-Whilst working with large arrays, checking to see if it contains a string can be
+When working with large arrays, checking to see if it contains a string can be
 costly on performance.
 
 # Story (TL;DR)
@@ -69,7 +69,7 @@ interesting is that I've included `indexOf`. This array function does in fact
 use linear search. Reading the polyfill on
 [MDN
 Website](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
-it proves this.
+proves this claim.
 
 Here is a snippet of it in action:
 
@@ -120,21 +120,74 @@ _java.util.Arrays version 8u40-b25_
 ```
 
 Thankfully, doing a binary search isn't a lot of code, but there is an operator
-that I am unfamiliar with and that is the bitwise logical operators. On line
-2435 you can see one of those operators getting used, that one in particular is
-a right bit-shift operator. I remember learning these in C and got told that
-you'll most likely never use it unless you're working with robotics and other
-low level programming stuff. So, I threw it out of my brain in space for
-something else, but after seeing this in action I think I will have to do some
-research and write about these operators in anther post. For now line 2435 is
-doing something like this:
+that I am unfamiliar with - bitwise logical operators. On line 2435 you can see
+one of those operators getting used, that one in particular is a right bit-shift
+operator. I remember learning these in C and got told that you'll most likely
+never use it unless you're working with robotics and other low level programming
+stuff. So, I threw it out of my brain in space for something else, but after
+seeing this in action I think I will have to do some research and write about
+these operators in anther post. For now line 2435 is doing something like this:
 
 ```
 int mid = (low + high) / 2;
 ```
 
 By looking at the implementation in Java and referencing it against Wikipedia's
-explanation it makes it much easier to read. We can see that it's getting the
-mid point of the array. Comparing to see if the mid value matches the key and
-determining whether or not to go up or down the chain. And if the cmp is 0 the
-key is found.
+explanation makes it easier to read. We can see that it's getting the mid point
+of the array and then comparing to see if the mid value matches the key and
+determining whether or not to go up or down the chain. It will loop through
+again and again getting new mid points, making it's steps quicker than iterating
+through one by one. And if the `cmp` is 0 the key is found. Without knowledge of
+the `compareTo()` method it is a little hard to understand. The `compareTo()`
+method returns the positioning difference between the comparisons from an
+ordered list. It will be easier to explain by example.
+
+```
+String word1 = "hello";
+String word2 = "beatle";
+String word3 = "soup";
+
+System.out.println(word1.compareTo(word2)); // 6 because "b" is 6 times greater than "h" in the alphabet
+System.out.println(word1.compareTo(word3); // -11 because "s" is 11 times lower than "h"
+```
+
+Now that we better understand the binary search method, we can notice an issue.
+Since we are comparing via an organised data structure, where everything is
+already sorted in order, running this method on an array which is not sorted
+will cause issues and not work. Thus, an array must be sorted before use with
+binary search.
+
+**Ensure your array is sorted in order before using binary search**
+
+## Javascript implementation
+Understanding Java's implementation we can translate it across to JavaScript.
+
+```
+function binarySearch(list, key) {
+  let low = 0;
+  let high = list.length - 1;
+
+  while (low <= high) {
+    const mid = (low + high) >>> 1;
+    const midVal = list[mid];
+    const cmp = midVal.localeCompare(key);
+
+    if (cmp < 0) {
+      low = mid + 1;
+    } else if (cmp > 0) {
+      high = mid - 1;
+    } else {
+      return mid; // key found
+    }
+  }
+  return -(low + 1); // key not found.
+}
+```
+
+A successful return will return the index of the key and if it's unsuccessful it
+will return `-1`. Now we can write more efficient code in JS.
+
+NOTE: My JS version is not a performant as the Java method as `localeCompare()`
+only returns `-1,0,1` which means it's travel is much shorter than Java's. Since
+JS doesn't have a `compareTo` Java-like-method we would have to create our own
+to match the same performance.

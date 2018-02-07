@@ -13,6 +13,11 @@
         ],
         "articles": [
             {
+                "title": "Use Binary Search in JS rather than Linear Approach",
+                "link": "/2018/js-binary-search",
+                "date": "2018-02-07"
+            },
+            {
                 "title": "OOP - Dependency Injection",
                 "link": "/2018/oop-dependency-injection",
                 "date": "2018-02-03"
