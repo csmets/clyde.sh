@@ -9,7 +9,7 @@ draft: false
 When working with large arrays, checking to see if it contains a string can be
 costly on performance.
 
-# Story (TL;DR)
+## Story (TL;DR)
 Whilst learning Java I learned about binary search for `collection` types and
 that it's algorithm is a lot more performant than your regular linear search.
 Curiously I wanted to see if JavaScript also has binary search natively built
@@ -24,7 +24,7 @@ ignore doing this.
 
 **Linear Search is faster for small arrays but slow for large ones.**
 
-# Linear Search
+## Linear Search
 
 Def: Linear; progressing from one stage to another in a single series of steps;
 sequential.
