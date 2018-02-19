@@ -13,6 +13,11 @@
         ],
         "articles": [
             {
+                "title": "Deobfuscating JavaScript malware",
+                "link": "/2018/deobfuscating-js-malware",
+                "date": "2018-02-19"
+            },
+            {
                 "title": "Use Binary Search in JS rather than Linear Approach",
                 "link": "/2018/js-binary-search",
                 "date": "2018-02-07"
